@@ -5,7 +5,7 @@ import { Button } from "../../../../packages/ui/src/components/ui/button";
 import { cn } from "../../../../packages/ui/src/lib/utils";
 
 const meta: Meta = {
-  title: "Flows/Card Application",
+  title: "Flows/Card Application/Starter templates",
   parameters: {
     layout: "centered",
     docs: {
