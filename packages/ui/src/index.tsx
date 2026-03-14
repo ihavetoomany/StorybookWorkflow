@@ -7,4 +7,6 @@ export {
   CardDescription,
   CardContent,
 } from "./components/ui/card";
+export { Overlay } from "./modules/Overlay";
+export type { OverlayProps } from "./modules/Overlay";
 export { cn } from "./lib/utils";

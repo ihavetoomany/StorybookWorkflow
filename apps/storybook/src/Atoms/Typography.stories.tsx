@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
-  title: "Foundations/Typography",
+  title: "Atoms/Typography",
   parameters: {
     layout: "padded",
     docs: {

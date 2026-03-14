@@ -2,7 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
-  title: "Foundations/Colors",
+  title: "Atoms/Colors",
   parameters: {
     layout: "padded",
     docs: {
