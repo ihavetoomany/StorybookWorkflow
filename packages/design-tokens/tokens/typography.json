@@ -1,0 +1,130 @@
+{
+  "fontFamily": {
+    "webFont": "Inter",
+    "sans": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "sansFallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "mono": "ui-monospace, 'Cascadia Code', monospace"
+  },
+  "fontSize": {
+    "xs": "0.75rem",
+    "sm": "0.875rem",
+    "base": "1rem",
+    "lg": "1.125rem",
+    "xl": "1.25rem",
+    "2xl": "1.5rem",
+    "3xl": "1.875rem",
+    "4xl": "2.25rem",
+    "12": "0.75rem",
+    "14": "0.875rem",
+    "16": "1rem",
+    "18": "1.125rem",
+    "20": "1.25rem",
+    "24": "1.5rem",
+    "28": "1.75rem",
+    "32": "2rem",
+    "36": "2.25rem"
+  },
+  "fontWeight": {
+    "normal": "400",
+    "medium": "500",
+    "semibold": "600",
+    "bold": "700"
+  },
+  "lineHeight": {
+    "tight": "1.25",
+    "normal": "1.5",
+    "relaxed": "1.75",
+    "16": "16px",
+    "20": "20px",
+    "24": "24px",
+    "28": "28px",
+    "32": "32px",
+    "36": "36px",
+    "40": "40px",
+    "44": "44px"
+  },
+  "letterSpacing": {
+    "tight": "-0.01em",
+    "normal": "0"
+  },
+  "typeStyles": {
+    "headlineXLarge": {
+      "fontSize": "2.25rem",
+      "fontWeight": "700",
+      "lineHeight": "44px",
+      "letterSpacing": "-0.01em"
+    },
+    "headlineLarge": {
+      "fontSize": "2rem",
+      "fontWeight": "700",
+      "lineHeight": "40px",
+      "letterSpacing": "-0.01em"
+    },
+    "headlineMedium": {
+      "fontSize": "1.75rem",
+      "fontWeight": "700",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.01em"
+    },
+    "headlineSmall": {
+      "fontSize": "1.5rem",
+      "fontWeight": "700",
+      "lineHeight": "32px",
+      "letterSpacing": "-0.01em"
+    },
+    "headlineXSmall": {
+      "fontSize": "1.25rem",
+      "fontWeight": "700",
+      "lineHeight": "28px",
+      "letterSpacing": "-0.01em"
+    },
+    "labelLarge": {
+      "fontSize": "1.125rem",
+      "fontWeight": "700",
+      "lineHeight": "28px",
+      "letterSpacing": "-0.01em"
+    },
+    "labelMedium": {
+      "fontSize": "1rem",
+      "fontWeight": "700",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.01em"
+    },
+    "labelSmall": {
+      "fontSize": "0.875rem",
+      "fontWeight": "700",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.01em"
+    },
+    "labelXSmall": {
+      "fontSize": "0.75rem",
+      "fontWeight": "700",
+      "lineHeight": "16px",
+      "letterSpacing": "-0.01em"
+    },
+    "bodyLarge": {
+      "fontSize": "1.125rem",
+      "fontWeight": "400",
+      "lineHeight": "28px",
+      "letterSpacing": "-0.01em"
+    },
+    "bodyMedium": {
+      "fontSize": "1rem",
+      "fontWeight": "400",
+      "lineHeight": "24px",
+      "letterSpacing": "-0.01em"
+    },
+    "bodySmall": {
+      "fontSize": "0.875rem",
+      "fontWeight": "400",
+      "lineHeight": "20px",
+      "letterSpacing": "-0.01em"
+    },
+    "bodyXSmall": {
+      "fontSize": "0.75rem",
+      "fontWeight": "400",
+      "lineHeight": "16px",
+      "letterSpacing": "-0.01em"
+    }
+  }
+}

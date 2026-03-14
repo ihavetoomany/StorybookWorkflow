@@ -1,0 +1,21 @@
+{
+  "name": "@resurs-handoff/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Resurs design tokens – single source for colors, typography, spacing (web CSS + JS for RN)",
+  "main": "dist/theme.js",
+  "types": "dist/theme.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/theme.d.ts",
+      "import": "./dist/theme.js",
+      "require": "./dist/theme.js"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.js",
+    "clean": "rm -rf dist"
+  }
+}

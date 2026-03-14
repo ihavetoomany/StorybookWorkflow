@@ -1,0 +1,6 @@
+/* Design tokens – loaded first */
+@import "@resurs-handoff/design-tokens/theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

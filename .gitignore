@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Storybook
+storybook-static/
+
+# Turbo
+.turbo/
+
+# React Native / Expo (when added)
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.hprof
+
+# Testing
+coverage/
+.nyc_output/
+
+# Optional: keep design-tokens dist for consumers (uncomment if you want to ignore generated tokens in git)
+# packages/design-tokens/dist/

@@ -1,0 +1,23 @@
+{
+  "name": "@resurs-handoff/native",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Resurs React Native design system – same structure as @resurs-handoff/ui, consumes design tokens",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "echo 'No bundle step for RN source; consume via metro or app build'",
+    "clean": "true"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "@resurs-handoff/design-tokens": "workspace:*"
+  }
+}

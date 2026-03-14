@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design tokens are loaded by the app (Storybook) from @resurs-handoff/design-tokens/theme.css */
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "resurs-handoff-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "UX handoff platform: design system, Storybook, and runnable prototypes for web and app",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "storybook": "pnpm --filter storybook dev",
+    "build:storybook": "pnpm --filter storybook build",
+    "lint": "turbo run lint",
+    "tokens:build": "pnpm --filter @resurs-handoff/design-tokens build"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0"
+  },
+  "packageManager": "pnpm@9.14.2",
+  "engines": {
+    "node": ">=18"
+  }
+}
