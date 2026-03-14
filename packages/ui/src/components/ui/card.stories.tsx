@@ -11,7 +11,7 @@ import {
 import { Button } from "./button";
 
 const meta: Meta<typeof Card> = {
-  title: "Components (Web)/Card",
+  title: "Components/Web/Card",
   component: Card,
   tags: ["autodocs"],
 };

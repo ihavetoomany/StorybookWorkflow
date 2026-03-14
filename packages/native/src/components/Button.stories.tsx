@@ -4,7 +4,7 @@ import { View } from "react-native";
 import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
-  title: "Components (App)/Button",
+  title: "Components/App/Button",
   component: Button,
   parameters: {
     layout: "centered",

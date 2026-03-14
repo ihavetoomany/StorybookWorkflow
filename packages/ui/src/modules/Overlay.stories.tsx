@@ -4,7 +4,7 @@ import { Overlay } from "./Overlay";
 import { Button } from "../components/ui/button";
 
 const meta: Meta<typeof Overlay> = {
-  title: "Modules/Overlay",
+  title: "Modules/Web/Overlay",
   component: Overlay,
   parameters: {
     layout: "centered",
