@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { OnlinebankShell } from "../../../../../packages/ui/src/views/onlinebank/OnlinebankShell";
 
 const meta: Meta<typeof OnlinebankShell> = {
-  title: "Interfaces/Onlinebank Web/Starter templates",
+  title: "Interfaces/Onlinebank/Starter templates",
   component: OnlinebankShell,
   parameters: {
     layout: "fullscreen",

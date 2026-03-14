@@ -18,6 +18,7 @@
     "typescript": "^5.6.0"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.0.0",
     "@resurs-handoff/design-tokens": "workspace:*"
   }
 }
