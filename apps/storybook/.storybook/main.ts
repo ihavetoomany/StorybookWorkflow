@@ -4,6 +4,7 @@ const config: StorybookConfig = {
   stories: [
     "../src/Atoms/**/*.stories.@(js|jsx|ts|tsx)",
     "../../../packages/ui/src/components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../../../packages/native/src/**/*.stories.@(js|jsx|ts|tsx)",
     "../../../packages/ui/src/modules/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/Flows/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/Interfaces/**/*.stories.@(js|jsx|ts|tsx)",
