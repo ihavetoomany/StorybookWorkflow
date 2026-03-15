@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "../src/Flows/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/Interfaces/**/*.stories.@(js|jsx|ts|tsx)",
     "../src/Handoffs/**/*.stories.@(js|jsx|ts|tsx)",
+    "../src/Experiments/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
