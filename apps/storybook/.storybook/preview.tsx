@@ -1,3 +1,4 @@
+import "./preview-setup";
 import type { Preview } from "@storybook/react";
 import "../src/preview.css";
 

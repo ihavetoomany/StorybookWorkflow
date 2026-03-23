@@ -74,6 +74,8 @@ const dtsContent = [
   "  fontSize: typeof import('./theme.js').default.fontSize;",
   "  fontWeight: typeof import('./theme.js').default.fontWeight;",
   "  lineHeight: typeof import('./theme.js').default.lineHeight;",
+  "  letterSpacing: typeof import('./theme.js').default.letterSpacing;",
+  "  typeStyles: typeof import('./theme.js').default.typeStyles;",
   "  radius: typeof import('./theme.js').default.radius;",
   "}",
   "declare const theme: ResursTheme;",

@@ -8,6 +8,8 @@
     "lint": "echo 'Lint storybook app'"
   },
   "dependencies": {
+    "expo-font": "~55.0.4",
+    "expo-modules-core": "^55.0.15",
     "@resurs-handoff/design-tokens": "workspace:*",
     "@resurs-handoff/native": "workspace:*",
     "@resurs-handoff/ui": "workspace:*",

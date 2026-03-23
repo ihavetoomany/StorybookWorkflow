@@ -1,0 +1,88 @@
+/**
+ * Resurs UI 2.0 (Figma) — page node ids after 🔓 Master Components.
+ * File: https://www.figma.com/design/DFy3VmnixeA0hD2W78qPGS/Resurs-UI-2.0
+ */
+export const FIGMA_FILE_KEY = "DFy3VmnixeA0hD2W78qPGS";
+
+export function figmaPageUrl(nodeId: string): string {
+  const nid = nodeId.replace(":", "-");
+  return `https://www.figma.com/design/${FIGMA_FILE_KEY}/Resurs-UI-2.0?node-id=${nid}`;
+}
+
+/** Maps each exported component to its Figma canvas node id */
+export const figmaPageNodeId = {
+  Alert: "435:24541",
+  AlertDialog: "7073:9887",
+  Autocomplete: "335:14891",
+  Accordion: "869:86254",
+  Avatar: "133:4540",
+  Backdrop: "503:38172",
+  Badge: "2:2",
+  BottomNavigation: "456:29486",
+  Breadcrumbs: "460:29642",
+  Button: "166:10484",
+  BillActivityListItem: "8314:13496",
+  StickyActionBar: "7217:2252",
+  ButtonGroup: "642:48410",
+  Card: "584:42764",
+  CardList: "6579:2432",
+  Checkbox: "341:27368",
+  Chip: "55:15217",
+  CreditCard: "1775:95722",
+  CreditWarning: "7497:23845",
+  DateTime: "442:27697",
+  Dialog: "769:81247",
+  Divider: "125:6073",
+  DotsIndicator: "1590:3688",
+  FilteredTabs: "2703:82659",
+  FloatingActionButton: "504:36349",
+  GraphicElements: "1798:664",
+  Icon: "95:3419",
+  IconButton: "171:14128",
+  Icons: "122:7839",
+  InfoBox: "3401:8578",
+  InputElements: "301:11923",
+  Layout: "569:53917",
+  Link: "457:29548",
+  List: "946:88322",
+  ListItem: "437:27104",
+  Logo: "409:85319",
+  Menu: "328:18920",
+  Modal: "1321:100135",
+  Multiline: "557:41252",
+  Pagination: "513:36867",
+  Paper: "577:44632",
+  PaymentStatusView: "4194:294",
+  PaymentOptionSelectField: "7186:152",
+  Progress: "443:31438",
+  Radio: "336:22774",
+  Rating: "475:32799",
+  SelectField: "302:13604",
+  SearchBar: "1967:14095",
+  SelectButtonField: "1556:50756",
+  SelectListField: "1556:1818",
+  SelectPaymentOptionField: "6263:102",
+  Skeleton: "441:27005",
+  Sidebar: "6629:14484",
+  Snackbar: "171:8411",
+  Slider: "216:9506",
+  Stepper: "117:3421",
+  Spinner: "7323:25624",
+  Spacer: "569:53957",
+  Switch: "363:17232",
+  Table: "697:54904",
+  Tabs: "443:32243",
+  ResursText: "6367:10697",
+  TextField: "353:19696",
+  PhoneCountryField: "6309:13848",
+  Timeline: "792:82363",
+  ToggleButton: "559:41201",
+  TopAppBar: "1381:97351",
+  TopNavBar: "6939:1668",
+  Toolbar: "2628:60184",
+  Toast: "6575:1104",
+  Tooltip: "90:3533",
+  TreeView: "783:83182",
+} as const;
+
+export type FigmaUi20ComponentName = keyof typeof figmaPageNodeId;

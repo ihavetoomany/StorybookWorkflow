@@ -1,4 +1,17 @@
+import { fileURLToPath } from "url";
 import type { StorybookConfig } from "@storybook/react-vite";
+
+/** Vite resolves `ExpoFontLoader.js` (native); Metro uses `ExpoFontLoader.web.js` in the browser. Not in package `exports`, so use a filesystem path. */
+const expoFontLoaderWeb = fileURLToPath(
+  new URL("../node_modules/expo-font/build/ExpoFontLoader.web.js", import.meta.url)
+);
+
+/** Absolute path to web stub (avoids Flow/TS-in-.js in real @react-native/assets-registry) */
+const registryStubPath = fileURLToPath(new URL("./rn-assets-registry-stub.js", import.meta.url));
+/** Re-exports react-native-web + TurboModuleRegistry stub for Vite */
+const reactNativeWebShimPath = fileURLToPath(
+  new URL("./react-native-web-for-storybook.ts", import.meta.url)
+);
 
 const config: StorybookConfig = {
   stories: [
@@ -38,11 +51,34 @@ const config: StorybookConfig = {
     ];
     // React Native for Web: alias so @resurs-handoff/native runs in the browser
     config.resolve = config.resolve ?? {};
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "react-native": "react-native-web",
+    const prevAlias = config.resolve.alias;
+    const resursAliases: Record<string, string> = {
+      // Must be shim (not bare react-native-web): named TurboModuleRegistry is missing from RN-web
+      "react-native": reactNativeWebShimPath,
       "react-native-web": "react-native-web",
+      // Real registry uses Flow/TS in .js; expo-asset only needs these exports in the browser
+      "@react-native/assets-registry/registry": registryStubPath,
+      // expo-font: Metro picks ExpoFontLoader.web.js; Vite was bundling ExpoFontLoader.js → requireNativeModule
+      "expo-font/build/ExpoFontLoader.js": expoFontLoaderWeb,
     };
+    const fontLoaderRegex = {
+      find: /[/\\]expo-font[/\\]build[/\\]ExpoFontLoader\.js$/,
+      replacement: expoFontLoaderWeb,
+    };
+    if (Array.isArray(prevAlias)) {
+      config.resolve.alias = [
+        ...prevAlias,
+        ...Object.entries(resursAliases).map(([find, replacement]) => ({ find, replacement })),
+        fontLoaderRegex,
+      ];
+    } else {
+      config.resolve.alias = [
+        ...Object.entries({ ...(prevAlias as Record<string, string>), ...resursAliases }).map(
+          ([find, replacement]) => ({ find, replacement })
+        ),
+        fontLoaderRegex,
+      ];
+    }
     config.resolve.extensions = [
       ".web.tsx", ".web.ts", ".tsx", ".ts",
       ".web.jsx", ".web.js", ".jsx", ".js",
@@ -58,6 +94,7 @@ const config: StorybookConfig = {
     config.optimizeDeps.include = [
       ...(Array.isArray(config.optimizeDeps.include) ? config.optimizeDeps.include : []),
       "react-native-web",
+      reactNativeWebShimPath,
       "@resurs-handoff/design-tokens",
       "@resurs-handoff/native",
     ];
@@ -65,6 +102,20 @@ const config: StorybookConfig = {
       ...(Array.isArray(config.optimizeDeps.exclude) ? config.optimizeDeps.exclude : []),
       "react-native",
     ];
+    config.optimizeDeps.esbuildOptions = {
+      ...config.optimizeDeps.esbuildOptions,
+      // Mirror Vite's resolve.extensions so esbuild picks .web.* variants during pre-bundling
+      resolveExtensions: [
+        ".web.tsx", ".web.ts", ".tsx", ".ts",
+        ".web.jsx", ".web.js", ".jsx", ".js",
+        ".json",
+      ],
+      // @expo/vector-icons ships JSX in .js files
+      loader: {
+        ...(config.optimizeDeps.esbuildOptions?.loader as Record<string, string> | undefined),
+        ".js": "jsx",
+      },
+    };
     return config;
   },
 };

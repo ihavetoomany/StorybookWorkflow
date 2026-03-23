@@ -2,6 +2,7 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { View } from "react-native";
 import { Button } from "./Button";
+import { figmaPageNodeId, figmaPageUrl } from "../figma/ui20Pages";
 
 const meta: Meta<typeof Button> = {
   title: "Components/App/Button",
@@ -10,8 +11,7 @@ const meta: Meta<typeof Button> = {
     layout: "centered",
     docs: {
       description: {
-        component:
-          "React Native Button (rendered via react-native-web in Storybook). Same component as in the App interface.",
+        component: `Resurs UI 2.0 — [Figma](${figmaPageUrl(figmaPageNodeId.Button)})`,
       },
     },
   },
@@ -24,36 +24,22 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-  args: {
-    title: "Button",
-    variant: "default",
-  },
+  args: { title: "Button", variant: "default" },
 };
 
 export const Outline: Story = {
-  args: {
-    title: "Outline",
-    variant: "outline",
-  },
+  args: { title: "Outline", variant: "outline" },
 };
 
 export const Secondary: Story = {
-  args: {
-    title: "Secondary",
-    variant: "secondary",
-  },
+  args: { title: "Secondary", variant: "secondary" },
 };
 
 export const Disabled: Story = {
-  args: {
-    title: "Disabled",
-    variant: "default",
-    disabled: true,
-  },
+  args: { title: "Disabled", variant: "default", disabled: true },
 };
 
 export const Variants: Story = {
